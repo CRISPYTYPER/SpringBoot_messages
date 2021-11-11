@@ -31,5 +31,35 @@
         </dependency>
     </dependencies>
 
+    <build>
+        <finalName>messages</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <!-- 이 플러그인은 .jar 파일의 main 클래스 정보를 필요로 한다.-->
+                <!-- mainClass 태그에서 이를 제공한다-->
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals><goal>single</goal></goals>
+                        <configuration>
+                            <archiveBaseDirectory>${project.basedir}</archiveBaseDirectory>
+                            <archive>
+                                <manifest>
+                                    <mainClass>app.messages.Application</mainClass>
+                                </manifest>
+                            </archive>
+                            <descriptorRefs>
+                                <descriptorRef>jar-with-dependencies</descriptorRef>
+                                <!-- 명령줄에서 .jar 파일을 실행하려면 애플리케이션의 의존성으로 spring-context-5.0.3.RELEASE.jar 파일을 .jar 파일에 포함시켜야 한다.-->
+                                <!-- 이를 위해 위 태그를 추가했다.-->
+                            </descriptorRefs>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
