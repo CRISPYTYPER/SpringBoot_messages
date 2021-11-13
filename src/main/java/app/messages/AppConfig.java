@@ -11,7 +11,7 @@ public class AppConfig {
     // 아래의 메소드 들은 빈을 생성하는 역할을 한다.
     // 그리고 메소드의 이름은 빈의 이름이 된다.
 
-    @Bean
+    /*@Bean
     public MessageRepository messageRepository() {
         return new MessageRepository();
     }
@@ -19,5 +19,7 @@ public class AppConfig {
     @Bean
     MessageService messageService() {
         return new MessageService(messageRepository()); // MessageRepository 인스턴스를 MessageService 생성자에 전달한다.
-    }
+    }*/
+    //이미 @Component를 사용해 MessageSerivce와 MessageRepository 빈을 선언했으므로
+    //위의 두 메소드는 필요 없다.
 }

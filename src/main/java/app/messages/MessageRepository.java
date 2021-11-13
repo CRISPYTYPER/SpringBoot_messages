@@ -2,7 +2,9 @@ package app.messages;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.stereotype.Component;
 
+@Component
 public class MessageRepository { //메시지 저장을 담당하는 레포지토리
     private final static Log log = LogFactory.getLog(MessageRepository.class);
     //static으로 선언된 변수는 메모리 공간에 하나만 존재하며, 어디서나 접근이 가능한 변수이다.

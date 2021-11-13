@@ -1,5 +1,9 @@
 package app.messages;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component //스프링에서 관리하는 빈을 가지려면 클래스 레벨에 @Component 어노테이션을 적용만 하면 된다.
 public class MessageService {
     private MessageRepository repository;
     // MessageRepository를 MessageService의 의존성으로 정의한다.
