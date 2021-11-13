@@ -13,7 +13,7 @@
 > 이렇게 해서 서버는 쿠키에서 찾은 세션 ID로 HttpSession 인스턴스를 조회해 사용자를 인식할 수 있다.
 
 ### DispatcherServlet
-스프링 MVC를 사요하면 서블릿을 생성할 필요가 없다.<br>
+스프링 MVC를 사용하면 서블릿을 생성할 필요가 없다.<br>
 클래스를 생성해 @Controller 어노테이션을 추가하고 @RequestMapping 어노테이션으로 특정 URI 패턴에 매핑할 수 있다.<br>
 규약에 따르면 클래스 이름은 보통 Controller로 끝난다.
 
